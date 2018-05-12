@@ -10,8 +10,8 @@ export default class LoginScreen extends Component {
       <View style={styles.mainContainer}>
         <View style={styles.container}>
           <Text style={styles.titleText}>Printsoc</Text>
-          <Text style={styles.formLabel}>NUSNET ID</Text>
-          <TextInput style={styles.textInput} autoFocus={true} maxLength={8} placeholder={'e0123456'} placeholderTextColor={'#888'} underlineColorAndroid={'#888'} />
+          <Text style={styles.formLabel}>Sunfire ID</Text>
+          <TextInput style={styles.textInput} autoFocus={true} placeholder={'e0123456'} placeholderTextColor={'#888'} underlineColorAndroid={'#888'} />
           <Text style={styles.formLabel}>Password</Text>
           <TextInput style={styles.textInput} secureTextEntry={true} placeholder={'Password'} placeholderTextColor={'#888'} underlineColorAndroid={'#888'} />
           <RoundedButton text={'Login'} onPress={() => window.alert('Mwahahaha I have your password now!')} />
