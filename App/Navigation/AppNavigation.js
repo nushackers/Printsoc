@@ -10,11 +10,7 @@ const PrimaryNav = StackNavigator(
   },
   {
     // Default config for all screens
-    headerMode: 'none',
-    initialRouteName: 'LaunchScreen',
-    navigationOptions: {
-      headerStyle: styles.header
-    }
+    initialRouteName: 'LaunchScreen'
   }
 );
 
