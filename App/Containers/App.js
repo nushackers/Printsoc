@@ -19,6 +19,7 @@ const store = createStore();
  */
 class App extends Component {
   render() {
+    console.log('Propo', this.props, this.props.fileURL);
     return (
       <Provider store={store}>
         <RootContainer />
