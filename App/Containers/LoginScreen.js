@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
-import { Text, TextInput, View } from 'react-native';
-import RoundedButton from '../Components/RoundedButton';
+import { Text, TextInput, View, Button } from 'react-native';
 
 import styles from './Styles/LoginScreenStyles';
 
@@ -11,13 +10,27 @@ export default class LoginScreen extends Component {
         <View style={styles.container}>
           <Text style={styles.titleText}>Printsoc</Text>
           <Text style={styles.formLabel}>Sunfire ID</Text>
-          <TextInput style={styles.textInput} autoFocus={true} placeholder={'e0123456'} placeholderTextColor={'#888'} underlineColorAndroid={'#888'} />
+          <TextInput
+            style={styles.textInput}
+            autoFocus={true}
+            placeholder="e0123456"
+            placeholderTextColor="#888"
+            underlineColorAndroid="#888"
+          />
           <Text style={styles.formLabel}>Password</Text>
-          <TextInput style={styles.textInput} secureTextEntry={true} placeholder={'Password'} placeholderTextColor={'#888'} underlineColorAndroid={'#888'} />
-          <RoundedButton text={'Login'} onPress={() => window.alert('Mwahahaha I have your password now!')} />
+          <TextInput
+            style={styles.textInput}
+            secureTextEntry={true}
+            placeholder="Password"
+            placeholderTextColor="#888"
+            underlineColorAndroid="#888"
+          />
+          <Button
+            title="Login"
+            onPress={() => window.alert('Mwahahaha I have your password now!')}
+          />
         </View>
-
       </View>
-    )
+    );
   }
 }
