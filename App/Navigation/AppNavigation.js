@@ -1,13 +1,14 @@
 import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 import LaunchScreen from '../Containers/LaunchScreen';
+import PrintScreen from '../Containers/PrintScreen';
 import LoginScreen from '../Containers/LoginScreen';
 
 import styles from './Styles/NavigationStyles';
 
 const MainNav = createStackNavigator(
   {
-    LaunchScreen
-    // TODO: PrintScreen
+    Launch: LaunchScreen,
+    Print: PrintScreen
   },
   {
     mode: 'modal'
