@@ -9,7 +9,7 @@ const ApplicationStyles = {
   screen: {
     mainContainer: {
       flex: 1,
-      backgroundColor: Colors.transparent
+      backgroundColor: Colors.background
     },
     backgroundImage: {
       position: 'absolute',
@@ -42,8 +42,17 @@ const ApplicationStyles = {
     },
     titleText: {
       ...Fonts.style.h2,
-      fontSize: 14,
-      color: Colors.text
+      fontSize: 28,
+      color: Colors.text,
+      textAlign: 'center'
+    },
+    normalText: {
+      ...Fonts.style.normal,
+      color: Colors.snow
+    },
+    textInput: {
+      ...Fonts.style.normal,
+      color: Colors.snow,
     }
   },
   darkLabelContainer: {
