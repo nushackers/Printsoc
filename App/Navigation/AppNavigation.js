@@ -1,21 +1,28 @@
-import { createStackNavigator } from 'react-navigation';
+import { createSwitchNavigator, createStackNavigator } from 'react-navigation';
 import LaunchScreen from '../Containers/LaunchScreen';
 import LoginScreen from '../Containers/LoginScreen';
 
 import styles from './Styles/NavigationStyles';
 
-// Manifest of possible screens
-const PrimaryNav = createStackNavigator(
+const MainNav = createStackNavigator(
   {
-    LoginScreen: { screen: LoginScreen }
+    LaunchScreen
+    // TODO: PrintScreen
+  },
+  {
+    mode: 'modal'
+  }
+);
+
+const PrimaryNav = createSwitchNavigator(
+  {
+    Main: MainNav,
+    Login: LoginScreen
   },
   {
     // Default config for all screens
     headerMode: 'none',
-    initialRouteName: 'LoginScreen',
-    navigationOptions: {
-      headerStyle: styles.header
-    }
+    initialRouteName: 'Main'
   }
 );
 

@@ -10,7 +10,7 @@ export default class RootContainer extends Component {
     return (
       <View style={styles.applicationView}>
         <StatusBar barStyle="light-content" />
-        <AppNavigation />
+        <AppNavigation {...this.props} />
       </View>
     );
   }

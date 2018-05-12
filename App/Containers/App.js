@@ -2,6 +2,7 @@ import '../Config';
 import DebugConfig from '../Config/DebugConfig';
 import React, { Component } from 'react';
 import RootContainer from './RootContainer';
+import AppContext from '../Util/AppContext.js';
 
 /**
  * Provides an entry point into our application.  Both index.ios.js and index.android.js
@@ -14,7 +15,12 @@ import RootContainer from './RootContainer';
 class App extends Component {
   render() {
     console.log('Propo', this.props, this.props.fileURL);
-    return <RootContainer />;
+    const context = { fileURL: this.props.fileURL };
+    return (
+      <AppContext.Provider value={context}>
+        <RootContainer />
+      </AppContext.Provider>
+    );
   }
 }
 
