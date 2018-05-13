@@ -52,7 +52,7 @@ const ApplicationStyles = {
     },
     textInput: {
       ...Fonts.style.normal,
-      color: Colors.snow
+      color: '#000'
     }
   },
   darkLabelContainer: {
