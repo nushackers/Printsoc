@@ -10,19 +10,19 @@ import { Images } from '../Themes';
 import styles from './Styles/LaunchScreenStyles';
 
 class LaunchScreen extends Component {
-  componentWillMount() {
-    this.navigateIfNecessary();
+  async componentWillMount() {
+    await this.navigateIfNecessary();
   }
 
-  componentDidUpdate() {
-    this.navigateIfNecessary();
+  async componentDidUpdate() {
+    await this.navigateIfNecessary();
   }
 
-  navigateIfNecessary() {
+  async navigateIfNecessary() {
     console.log('LS cWM props', this.props);
 
     // Redirect to login screen if user is not logged in
-    const creds = getSunfireCredentials();
+    const creds = await getSunfireCredentials();
     if (!creds) {
       const navigateAction = NavigationActions.navigate({ routeName: 'Login' });
       this.props.navigation.dispatch(navigateAction);

@@ -23,7 +23,7 @@ export default class LoginScreen extends Component {
     this.setState({ verifying: false, credentialsValid: isValid });
 
     if (isValid) {
-      setSunfireCredentials(username, password);
+      await setSunfireCredentials(username, password);
 
       // Navigate to main screen
       const navigateAction = NavigationActions.navigate({ routeName: 'Launch' });
