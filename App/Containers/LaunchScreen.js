@@ -3,6 +3,7 @@ import { Text, View } from 'react-native';
 import { NavigationActions } from 'react-navigation';
 
 import AppContext from '../Util/AppContext.js';
+import { getSunfireCredentials } from '../Util/Auth.js';
 import { Images } from '../Themes';
 
 // Styles
@@ -19,14 +20,20 @@ class LaunchScreen extends Component {
 
   navigateIfNecessary() {
     console.log('LS cWM props', this.props);
-    // TODO: Redirect to login screen if user is not logged in
-    // const navigateAction = NavigationActions.navigate({ routeName: 'Login' });
-    // this.props.navigation.dispatch(navigateAction);
 
-    // TODO: Redirect to PrintScreen if props.fileURL present
+    // Redirect to login screen if user is not logged in
+    const creds = getSunfireCredentials();
+    if (!creds) {
+      const navigateAction = NavigationActions.navigate({ routeName: 'Login' });
+      this.props.navigation.dispatch(navigateAction);
+      return;
+    }
+
+    // Redirect to PrintScreen if props.fileURL present
     if (this.props.fileURL) {
       const navigateAction = NavigationActions.navigate({ routeName: 'Print' });
       this.props.navigation.dispatch(navigateAction);
+      return;
     }
   }
 

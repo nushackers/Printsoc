@@ -32,8 +32,7 @@
     "react": "^16.3.2",
     "react-native": "^0.55.4",
     "react-native-config": "^0.11.5",
-    "react-native-device-info": "^0.21.5",
-    "react-native-ssh": "https://github.com/azlyth/react-native-ssh.git#6cf9a201becaa785e09bb77cc33b04772142a2f3",
+    "react-native-ssh": "https://github.com/taneliang/react-native-ssh.git#7a83198f700f4e09d94abba0c25c3088b5dae628",
     "react-native-vector-icons": "^4.6.0",
     "react-navigation": "^2.0.1",
     "seamless-immutable": "^7.1.3"
