@@ -1,8 +1,8 @@
 rootProject.name = 'Printsoc'
 include ':react-native-fs'
 project(':react-native-fs').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-fs/android')
-include ':react-native-config'
-project(':react-native-config').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-config/android')
+include ':react-native-sensitive-info'
+project(':react-native-sensitive-info').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-sensitive-info/android')
 include ':react-native-ssh'
 project(':react-native-ssh').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-ssh/android')
 include ':react-native-vector-icons'

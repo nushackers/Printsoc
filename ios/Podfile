@@ -8,10 +8,6 @@ target 'Printsoc' do
   # Pods for Printsoc
   pod 'NMSSH', '~> 2.2.8'
 
-  pod 'react-native-config', :path => '../node_modules/react-native-config'
-
-  pod 'RNFS', :path => '../node_modules/react-native-fs'
-
   target 'PrintsocTests' do
     inherit! :search_paths
     # Pods for testing

@@ -4,7 +4,7 @@ import android.app.Application;
 
 import com.facebook.react.ReactApplication;
 import com.rnfs.RNFSPackage;
-import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
+import br.com.classapp.RNSensitiveInfo.RNSensitiveInfoPackage;
 import com.reactnative.ssh.RNSSHPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
 import com.facebook.react.ReactNativeHost;
@@ -28,7 +28,7 @@ public class MainApplication extends Application implements ReactApplication {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
             new RNFSPackage(),
-            new ReactNativeConfigPackage(),
+            new RNSensitiveInfoPackage(),
             new RNSSHPackage(),
             new VectorIconsPackage()
       );

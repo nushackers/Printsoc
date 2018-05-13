@@ -5063,10 +5063,6 @@ react-lifecycles-compat@^3:
   version "3.0.4"
   resolved "https://registry.yarnpkg.com/react-lifecycles-compat/-/react-lifecycles-compat-3.0.4.tgz#4f1a273afdfc8f3488a8c516bfda78f872352362"
 
-react-native-config@^0.11.5:
-  version "0.11.5"
-  resolved "https://registry.yarnpkg.com/react-native-config/-/react-native-config-0.11.5.tgz#516cb7b6ec437c7739236ca075971db3aabdcb95"
-
 react-native-dismiss-keyboard@1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/react-native-dismiss-keyboard/-/react-native-dismiss-keyboard-1.0.0.tgz#32886242b3f2317e121f3aeb9b0a585e2b879b49"
@@ -5095,6 +5091,10 @@ react-native-safe-area-view@^0.7.0:
   resolved "https://registry.yarnpkg.com/react-native-safe-area-view/-/react-native-safe-area-view-0.7.0.tgz#38f5ab9368d6ef9e5d18ab64212938af3ec39421"
   dependencies:
     hoist-non-react-statics "^2.3.1"
+
+react-native-sensitive-info@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/react-native-sensitive-info/-/react-native-sensitive-info-5.1.0.tgz#1655c482f99c80023a23b2d9adab1ae260b1988a"
 
 "react-native-ssh@https://github.com/taneliang/react-native-ssh.git#7a83198f700f4e09d94abba0c25c3088b5dae628":
   version "1.0.1"
