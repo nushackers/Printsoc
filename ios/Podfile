@@ -10,6 +10,8 @@ target 'Printsoc' do
 
   pod 'react-native-config', :path => '../node_modules/react-native-config'
 
+  pod 'RNFS', :path => '../node_modules/react-native-fs'
+
   target 'PrintsocTests' do
     inherit! :search_paths
     # Pods for testing

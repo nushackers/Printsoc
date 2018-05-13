@@ -3,6 +3,7 @@ package com.printsoc;
 import android.app.Application;
 
 import com.facebook.react.ReactApplication;
+import com.rnfs.RNFSPackage;
 import com.lugg.ReactNativeConfig.ReactNativeConfigPackage;
 import com.reactnative.ssh.RNSSHPackage;
 import com.oblador.vectoricons.VectorIconsPackage;
@@ -26,6 +27,7 @@ public class MainApplication extends Application implements ReactApplication {
     protected List<ReactPackage> getPackages() {
       return Arrays.<ReactPackage>asList(
           new MainReactPackage(),
+            new RNFSPackage(),
             new ReactNativeConfigPackage(),
             new RNSSHPackage(),
             new VectorIconsPackage()
