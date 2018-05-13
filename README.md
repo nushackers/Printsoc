@@ -17,6 +17,8 @@
 1. cd to the repo
 2. Run Build for either OS
   * for iOS
+    * run `cd ios`
+    * Install CocoaPods if you haven't, then run `pod install`
     * run `react-native run-ios`
   * for Android
     * Run Genymotion

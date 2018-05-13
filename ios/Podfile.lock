@@ -1,0 +1,16 @@
+PODS:
+  - NMSSH (2.2.8)
+
+DEPENDENCIES:
+  - NMSSH (~> 2.2.8)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - NMSSH
+
+SPEC CHECKSUMS:
+  NMSSH: b722885a07485a2c03ffa3ea56a7b0308dbdc37c
+
+PODFILE CHECKSUM: 638a77021e82942bb70b2c1540fe8fe07db0f4ce
+
+COCOAPODS: 1.5.2
