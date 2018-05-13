@@ -19,7 +19,7 @@ class LaunchScreen extends Component {
   }
 
   async navigateIfNecessary() {
-    console.log('LS cWM props', this.props);
+    console.log('LS nIN props', this.props);
 
     // Redirect to login screen if user is not logged in
     const creds = await getSunfireCredentials();

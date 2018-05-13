@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import { Text, TextInput, View, Button } from 'react-native';
 import { NavigationActions } from 'react-navigation';
-import { verifySunfireCredentials, setSunfireCredentials } from '../Util/Auth';
+import { setSunfireCredentials } from '../Util/Auth';
+import { verifyCredentials } from '../Util/Sunfire';
 
 import styles from './Styles/LoginScreenStyles';
 
@@ -19,7 +20,7 @@ export default class LoginScreen extends Component {
   handleLogin = async () => {
     const { username, password } = this.state;
     this.setState({ verifying: true });
-    const isValid = await verifySunfireCredentials(username, password);
+    const isValid = await verifyCredentials(username, password);
     this.setState({ verifying: false, credentialsValid: isValid });
 
     if (isValid) {
