@@ -44,12 +44,17 @@ class LaunchScreen extends Component {
   }
 
   async getStatistics() {
-    // Create ssh key if it does not exist already
-    await executeCommand('(cat /dev/zero | ssh-keygen -q -N "" -t rsa) && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys');
-    const result = await executeCommand(`ssh -tto StrictHostKeyChecking=no localhost /usr/local/bin/pusage`);
-    console.log(result);
-    console.log(await executeCommand('ls ~'));
-    return result.join('\n');
+    try {
+      // Create ssh key if it does not exist already
+      await executeCommand('(cat /dev/zero | ssh-keygen -q -N "" -t rsa) && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys');
+      const result = await executeCommand(`ssh -tto StrictHostKeyChecking=no localhost /usr/local/bin/pusage`);
+      console.log(result);
+      return result.join('\n');
+    } catch(e) {
+      window.alert('There is an error connecting to sunfire');
+      const navigateAction = NavigationActions.navigate({ routeName: 'Login' });
+      this.props.navigation.dispatch(navigateAction);
+    }
   }
 
   render() {
