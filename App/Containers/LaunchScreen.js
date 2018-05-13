@@ -4,14 +4,20 @@ import { NavigationActions } from 'react-navigation';
 
 import AppContext from '../Util/AppContext.js';
 import { getSunfireCredentials } from '../Util/Auth.js';
+import { executeCommand } from '../Util/Sunfire';
 import { Images } from '../Themes';
 
 // Styles
 import styles from './Styles/LaunchScreenStyles';
 
 class LaunchScreen extends Component {
+  constructor(props) {
+    super(props);
+    this.state = { statistics: 'Loading...' };
+  }
   async componentWillMount() {
     await this.navigateIfNecessary();
+    this.setState({ statistics: await this.getStatistics() });
   }
 
   async componentDidUpdate() {
@@ -37,10 +43,21 @@ class LaunchScreen extends Component {
     }
   }
 
+  async getStatistics() {
+    // Create ssh key if it does not exist already
+    await executeCommand('(cat /dev/zero | ssh-keygen -q -N "" -t rsa) && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys');
+    const result = await executeCommand(`ssh -tto StrictHostKeyChecking=no localhost /usr/local/bin/pusage`);
+    console.log(result);
+    console.log(await executeCommand('ls ~'));
+    return result.join('\n');
+  }
+
   render() {
     return (
       <View style={styles.mainContainer}>
         <Text>Open a file in Printsoc to print a file in SoC</Text>
+        <Text>Printing statistics:</Text>
+        <Text>{this.state.statistics}</Text>
       </View>
     );
   }
