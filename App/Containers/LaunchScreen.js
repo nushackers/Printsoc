@@ -46,8 +46,8 @@ class LaunchScreen extends Component {
   async getStatistics() {
     try {
       // Create ssh key if it does not exist already
-      await executeCommand('(cat /dev/zero | ssh-keygen -q -N "" -t rsa) && cat ~/.ssh/id_rsa.pub >> ~/.ssh/authorized_keys');
-      const result = await executeCommand(`ssh -tto StrictHostKeyChecking=no localhost /usr/local/bin/pusage`);
+      await executeCommand('(cat /dev/zero | ssh-keygen -q -N "" -t rsa -f ~/.ssh/printsoc_id_rsa) && cat ~/.ssh/printsoc_id_rsa.pub >> ~/.ssh/authorized_keys');
+      const result = await executeCommand(`ssh -tto StrictHostKeyChecking=no -i ~/.ssh/printsoc_id_rsa localhost /usr/local/bin/pusage`);
       console.log(result);
       return result.join('\n');
     } catch(e) {
